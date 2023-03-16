@@ -1,0 +1,19 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["standard", "prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "indent": ["warn", 2],
+    "quotes": ["off", "single"],
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "array-bracket-spacing": ["off", "always"]
+  }
+}
