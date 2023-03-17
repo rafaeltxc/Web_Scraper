@@ -1,19 +1,24 @@
 {
   "env": {
-    "commonjs": true,
     "es2021": true,
     "node": true
   },
-  "extends": ["standard", "prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "overrides": [],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
+  "plugins": ["@typescript-eslint"],
   "rules": {
-    "indent": ["warn", 2],
-    "quotes": ["off", "single"],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "windows"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
     "no-console": "warn",
     "no-unused-vars": "warn",
-    "array-bracket-spacing": ["off", "always"]
+    "array-bracket-spacing": ["off", "always"],
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }
