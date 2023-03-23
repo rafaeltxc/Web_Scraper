@@ -10,7 +10,7 @@ export interface objPattern {
   withoutDiscount: string | null;
 }
 
-export async function scrap() {
+export async function scrap(value: string) {
   // initialize chrome browser and go to google.com
   const driver: WebDriver = await new Builder().forBrowser('chrome').build();
   driver.manage().window().setRect({ width: 500, height: 500 });
@@ -18,7 +18,7 @@ export async function scrap() {
 
   // search for some value
   const searchBar: WebElement = await driver.findElement(By.className('gLFyf'));
-  await searchBar.sendKeys('Bola de basquete');
+  await searchBar.sendKeys(value);
   await searchBar.sendKeys(Key.ENTER);
 
   // go to the shopping part and set the current window and page url
